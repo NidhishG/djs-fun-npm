@@ -21,8 +21,9 @@ djs.wyr(message, {
 ### Random Joke
 
 ```js
-const djs = require('djs-fun')
-djs.joke(message, {
+    const { djsrandom } = require('djs-fun')
+    const djs = new djsrandom()
+    djs.joke(message, {
         embedTitle: 'embed title here',
         embedColor: 'hex here'
 })
@@ -32,8 +33,9 @@ djs.joke(message, {
 ### Random Quote
 
 ```js
-const djs = require('djs-fun')
-djs.quote(message, {
+    const { djsrandom } = require('djs-fun')
+    const djs = new djsrandom()
+    djs.quote(message, {
         embedTitle: 'embed title here',
         embedColor: 'hex here'
 })
