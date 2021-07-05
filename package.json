@@ -1,6 +1,6 @@
 {
   "name": "djs-fun",
-  "version": "1.1.1",
+  "version": "1.1.9",
   "description": "A package meant for Discord.js",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,9 @@
   "dependencies": {
     "axios": "^0.21.1",
     "discord.js": "^13.0.0-dev.941cd86.1625141252"
-  },  
-     "repository": {
+  },
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/NidhishG/djs-fun-npm/"
-}
+  }
 }
