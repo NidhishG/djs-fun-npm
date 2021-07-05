@@ -32,6 +32,25 @@ class djsrandom {
         message.channel.send({embeds: [e]})      
 
       }
+      async meme(message, options ={}){
+        if (!message) throw new Error('djs-fun Err: "message" is not defined')
+const cats = ['dankmemes', 'memes', 'MemeEconomy', 'AdviceAnimals']
+const random = cats[Math.floor(Math.random() * cats.length)]
+
+
+        const axios = require('axios')
+        const body = await axios.get(`https://api.tovade.xyz/v1/info/reddit?sub=${random}`)
+        const res = body.data
+        const e = new MessageEmbed()
+        e.setTitle(`${res.title}`)
+        e.setURL(`${res.permalink}`) 
+        e.setColor(options.embedColor || 'RANDOM')
+        e.setImage(`${res.url}`)
+        e.setFooter(`👍 Upvotes: ${res.votes["upvotes"]} | 👎 Downvotes: ${res.votes["downvotes"]}`)
+        message.channel.send({embeds: [e]})      
+
+      }
       
+
   }
   module.exports = djsrandom;

@@ -55,6 +55,16 @@ djs.ghostPing(message, {
 ```
 ![RQPIC](https://imgur.com/MuERdF5.png)
 
+### Random Meme
+
+```js
+  const { djsrandom } = require('djs-fun')
+  const djs = new djsrandom()
+  djs.meme(message, {
+      embedColor: 'ff0000'
+})
+```
+![img229](https://cdn.discordapp.com/attachments/861399521035419688/861407843017162752/unknown.png)
 # Search
 
 ### Play Store Search
