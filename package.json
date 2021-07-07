@@ -15,5 +15,13 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NidhishG/djs-fun-npm/"
-  }
+  },
+  "keywords": [
+    "djs-fun",
+    "discord",
+    "djs",
+    "fun",
+    "discord.js",
+    "games"
+  ]
 }
