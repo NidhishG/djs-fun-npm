@@ -5,6 +5,8 @@
 
 This package is supposed to be a cool extension to [Discord.js](discord.js.org)
 
+*Credits to Sujal Goel#0302 for the api i used for Guess The Pokemon function.
+
 ### Would You Rather
 
 ```js
@@ -28,6 +30,17 @@ djs.ghostPing(message, {
 })
 ```
 ![img30](https://cdn.discordapp.com/attachments/851508427531878451/861400480969916417/ghostping.gif)
+
+# Games
+
+### Guess The Pokemon
+
+```js
+    const { djsgames } = require('djs-fun')
+    const djs = new djsgames()
+    djs.guessThePokemon(message)
+```
+![poke](https://cdn.discordapp.com/attachments/814301956612816929/862146678344384542/pokemon.gif)
 
 # Random Stuff
 
@@ -65,6 +78,18 @@ djs.ghostPing(message, {
 })
 ```
 ![img229](https://cdn.discordapp.com/attachments/861399521035419688/861407843017162752/unknown.png)
+
+### Random Why
+```js
+    const { djsrandom } = require('djs-fun')
+    const djs = new djsrandom()
+    djs.why(message, {
+        embedTitle: 'embed title here',
+        embedColor: 'hex here'
+})
+```
+![whyyyyyy](https://cdn.discordapp.com/attachments/814301956612816929/862016460535627816/unknown.png)
+
 # Search
 
 ### Play Store Search

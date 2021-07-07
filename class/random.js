@@ -34,23 +34,32 @@ class djsrandom {
       }
       async meme(message, options ={}){
         if (!message) throw new Error('djs-fun Err: "message" is not defined')
-const cats = ['dankmemes', 'memes', 'MemeEconomy', 'AdviceAnimals']
-const random = cats[Math.floor(Math.random() * cats.length)]
 
 
         const axios = require('axios')
-        const body = await axios.get(`https://api.tovade.xyz/v1/info/reddit?sub=${random}`)
+        const body = await axios.get(`https://fun-api.sujalgoel.ml/meme`)
         const res = body.data
         const e = new MessageEmbed()
-        e.setTitle(`${res.title}`)
-        e.setURL(`${res.permalink}`) 
+        e.setTitle(`${res.data.title}`)
+        e.setURL(`${res.data.postLink}`) 
         e.setColor(options.embedColor || 'RANDOM')
-        e.setImage(`${res.url}`)
-        e.setFooter(`👍 Upvotes: ${res.votes["upvotes"]} | 👎 Downvotes: ${res.votes["downvotes"]}`)
+        e.setImage(`${res.data.image}`)
+        e.setFooter(`👍 ${res.data.upvotes} | 👎 ${res.data.downvotes}`)
         message.channel.send({embeds: [e]})      
 
       }
-      
+      async why(message, options ={}){
+        if (!message) throw new Error('djs-fun Err: "message" is not defined')
+
+        const axios = require('axios')
+        const body = await axios.get(`https://nekos.life/api/v2/why`)
+        const res = body.data
+        const e = new MessageEmbed()
+        e.setTitle(options.embedTitle || 'Random Why')
+        e.setColor(options.embedColor || 'RANDOM')
+        e.setDescription(`${res.why}`)
+        message.channel.send({embeds: [e]})      
+      }
 
   }
   module.exports = djsrandom;
